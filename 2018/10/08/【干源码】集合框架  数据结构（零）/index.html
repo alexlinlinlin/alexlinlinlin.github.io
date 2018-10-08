@@ -79,13 +79,33 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="AlexBLOG">
-<meta property="og:url" content="www.alexlin.club/index.html">
+<meta name="description" content="【干源码】集合框架  数据结构（零）概述​    本专题将会给大家来带Java最实用的东西—==集合框架==，并将会直接从源码入手，直接==干源码==！由于集合框架的底层离不开==数据结构==，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。 ​    数据结构可以说是计算机入门==必修课程==，同时也是特别==烧脑==的纯理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【干源码】集合框架  数据结构（零）">
+<meta property="og:url" content="www.alexlin.club/2018/10/08/【干源码】集合框架  数据结构（零）/index.html">
 <meta property="og:site_name" content="AlexBLOG">
+<meta property="og:description" content="【干源码】集合框架  数据结构（零）概述​    本专题将会给大家来带Java最实用的东西—==集合框架==，并将会直接从源码入手，直接==干源码==！由于集合框架的底层离不开==数据结构==，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。 ​    数据结构可以说是计算机入门==必修课程==，同时也是特别==烧脑==的纯理">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/shujujiegou.png">
+<meta property="og:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/huangshang.jpg">
+<meta property="og:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/xianxing.jpg">
+<meta property="og:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/shu.jpg">
+<meta property="og:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/tuxing.jpg">
+<meta property="og:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/sx1.png">
+<meta property="og:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/sxg1.gif">
+<meta property="og:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/sx3.gif">
+<meta property="og:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/lb.png">
+<meta property="og:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/lbg.gif">
+<meta property="og:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/sy.png">
+<meta property="og:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/hash1.png">
+<meta property="og:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/hash2.png">
+<meta property="og:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/zongjie.png">
+<meta property="og:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/zongjie2.png">
+<meta property="og:updated_time" content="2018-10-08T14:33:03.757Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AlexBLOG">
+<meta name="twitter:title" content="【干源码】集合框架  数据结构（零）">
+<meta name="twitter:description" content="【干源码】集合框架  数据结构（零）概述​    本专题将会给大家来带Java最实用的东西—==集合框架==，并将会直接从源码入手，直接==干源码==！由于集合框架的底层离不开==数据结构==，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。 ​    数据结构可以说是计算机入门==必修课程==，同时也是特别==烧脑==的纯理">
+<meta name="twitter:image" content="www.alexlin.club/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/shujujiegou.png">
 
 
 
@@ -115,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="www.alexlin.club/"/>
+  <link rel="canonical" href="www.alexlin.club/2018/10/08/【干源码】集合框架  数据结构（零）/"/>
 
 
 
 
 
-  <title>AlexBLOG</title>
+  <title>【干源码】集合框架  数据结构（零） | AlexBLOG</title>
   
 
 
@@ -140,8 +160,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -264,9 +283,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -296,9 +315,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/08/【干源码】集合框架  数据结构（零）/" itemprop="url">【干源码】集合框架  数据结构（零）</a></h1>
+          <h1 class="post-title" itemprop="name headline">【干源码】集合框架  数据结构（零）</h1>
         
 
         <div class="post-meta">
@@ -348,9 +365,7 @@
       
 
       
-        
-          
-            <h1 id="【干源码】集合框架-数据结构（零）"><a href="#【干源码】集合框架-数据结构（零）" class="headerlink" title="【干源码】集合框架  数据结构（零）"></a>【干源码】集合框架  数据结构（零）</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>​    本专题将会给大家来带Java最实用的东西—==集合框架==，并将会直接从源码入手，直接==干源码==！由于集合框架的底层离不开==数据结构==，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。</p>
+        <h1 id="【干源码】集合框架-数据结构（零）"><a href="#【干源码】集合框架-数据结构（零）" class="headerlink" title="【干源码】集合框架  数据结构（零）"></a>【干源码】集合框架  数据结构（零）</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>​    本专题将会给大家来带Java最实用的东西—==集合框架==，并将会直接从源码入手，直接==干源码==！由于集合框架的底层离不开==数据结构==，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。</p>
 <p>​    数据结构可以说是计算机入门==必修课程==，同时也是特别==烧脑==的纯理论知识。所以本篇将会尽量==避开==让人看不懂的奇奇怪怪的东西，以生动形象的图文并茂带你==窥探==神秘的数据结构。</p>
 <h2 id="什么是数据结构？"><a href="#什么是数据结构？" class="headerlink" title="什么是数据结构？"></a>什么是数据结构？</h2><blockquote>
 <p><strong>数据结构是计算机存储、组织数据的方式。数据结构是指相互之间存在着一种或多种关系的数据元素的集合和该集合中数据元素之间的关系组成。通常情况下，精心选择的数据结构可以带来更高的运行或者存储效率。</strong></p>
@@ -424,8 +439,6 @@
 <p><img src="img/blog0/zongjie2.png" alt=""></p>
 <p>这些内容可以说是古代劳动人民智慧的结晶，很多数据结构我们都可以直接拿来用。但是！这些计算机底层的东西，一定不能被动地记忆，要辩证地思考，上面的一切都不是真理，可能随着时间会慢慢被改进或者淘汰。</p>
 
-          
-        
       
     </div>
     
@@ -435,6 +448,30 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="Alex Lin 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
@@ -442,132 +479,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="www.alexlin.club/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本 (2)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Alex Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AlexBLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本 (2)/" itemprop="url">我个人博客的第一篇博客，哈哈哈...</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-07T14:47:37+08:00">
-                2018-10-07
-              </time>
+              <a href="/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本 (2)/" rel="next" title="我个人博客的第一篇博客，哈哈哈...">
+                <i class="fa fa-chevron-left"></i> 我个人博客的第一篇博客，哈哈哈...
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="大家好"><a href="#大家好" class="headerlink" title="大家好"></a>大家好</h1><p>测试！</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -577,370 +510,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="www.alexlin.club/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Alex Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AlexBLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本/" itemprop="url">我个人博客的第一篇博客，哈哈哈...</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-07T14:47:37+08:00">
-                2018-10-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="大家好"><a href="#大家好" class="headerlink" title="大家好"></a>大家好</h1><p>测试！</p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="www.alexlin.club/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本 (3)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Alex Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AlexBLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本 (3)/" itemprop="url">我个人博客的第一篇博客，哈哈哈...</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-07T14:47:37+08:00">
-                2018-10-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="大家好"><a href="#大家好" class="headerlink" title="大家好"></a>大家好</h1><p>测试！</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="www.alexlin.club/2018/10/07/我个人博客的第一篇博客，哈哈哈/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Alex Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AlexBLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/07/我个人博客的第一篇博客，哈哈哈/" itemprop="url">我个人博客的第一篇博客，哈哈哈...</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-07T14:47:37+08:00">
-                2018-10-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="大家好"><a href="#大家好" class="headerlink" title="大家好"></a>大家好</h1><p>测试！</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -948,6 +522,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -968,8 +546,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1011,6 +598,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#【干源码】集合框架-数据结构（零）"><span class="nav-number">1.</span> <span class="nav-text">【干源码】集合框架  数据结构（零）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是数据结构？"><span class="nav-number">1.2.</span> <span class="nav-text">什么是数据结构？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据结构分为三个部分"><span class="nav-number">1.3.</span> <span class="nav-text">数据结构分为三个部分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、逻辑结构"><span class="nav-number">1.3.1.</span> <span class="nav-text">一、逻辑结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-集合结构"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">1.集合结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-线性结构"><span class="nav-number">1.3.1.2.</span> <span class="nav-text">2.线性结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-树形结构"><span class="nav-number">1.3.1.3.</span> <span class="nav-text">3.树形结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-图形结构"><span class="nav-number">1.3.1.4.</span> <span class="nav-text">4.图形结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、物理结构"><span class="nav-number">1.3.2.</span> <span class="nav-text">二、物理结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-顺序存储结构"><span class="nav-number">1.3.2.1.</span> <span class="nav-text">1.顺序存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-链式存储结构"><span class="nav-number">1.3.2.2.</span> <span class="nav-text">2.链式存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-索引存储结构"><span class="nav-number">1.3.2.3.</span> <span class="nav-text">3.索引存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-散列存储结构"><span class="nav-number">1.3.2.4.</span> <span class="nav-text">4.散列存储结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、算法"><span class="nav-number">1.3.3.</span> <span class="nav-text">三、算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.4.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1144,6 +747,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
