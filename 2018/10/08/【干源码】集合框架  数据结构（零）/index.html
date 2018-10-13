@@ -74,22 +74,21 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="AlexBLOG" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="AlexBlog" type="application/atom+xml" />
 
 
 
 
 
 
-<meta name="description" content="【干源码】集合框架  数据结构（零）概述​    本专题将会给大家来带Java最实用的东西—==集合框架==，并将会直接从源码入手，直接==干源码==！由于集合框架的底层离不开==数据结构==，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。 ​    数据结构可以说是计算机入门==必修课程==，同时也是特别==烧脑==的纯理">
+<meta name="description" content="【干源码】集合框架  数据结构（零）概述​    本专题将会给大家来带Java最实用的东西—集合框架，并将会直接从源码入手，直接干源码！由于集合框架的底层离不开数据结构，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。 ​    数据结构可以说是计算机入门必修课程，同时也是特别烧脑的纯理论知识。所以本篇将会尽量避开让人看不懂的">
 <meta name="keywords" content="java,集合框架,源码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【干源码】集合框架  数据结构（零）">
 <meta property="og:url" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架  数据结构（零）/index.html">
-<meta property="og:site_name" content="AlexBLOG">
-<meta property="og:description" content="【干源码】集合框架  数据结构（零）概述​    本专题将会给大家来带Java最实用的东西—==集合框架==，并将会直接从源码入手，直接==干源码==！由于集合框架的底层离不开==数据结构==，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。 ​    数据结构可以说是计算机入门==必修课程==，同时也是特别==烧脑==的纯理">
+<meta property="og:site_name" content="AlexBlog">
+<meta property="og:description" content="【干源码】集合框架  数据结构（零）概述​    本专题将会给大家来带Java最实用的东西—集合框架，并将会直接从源码入手，直接干源码！由于集合框架的底层离不开数据结构，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。 ​    数据结构可以说是计算机入门必修课程，同时也是特别烧脑的纯理论知识。所以本篇将会尽量避开让人看不懂的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/shujujiegou.png">
 <meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/huangshang.jpg">
 <meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/xianxing.jpg">
 <meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/shu.jpg">
@@ -104,11 +103,11 @@
 <meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/hash2.png">
 <meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/zongjie.png">
 <meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/zongjie2.png">
-<meta property="og:updated_time" content="2018-10-13T14:24:34.277Z">
+<meta property="og:updated_time" content="2018-10-13T14:48:27.524Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【干源码】集合框架  数据结构（零）">
-<meta name="twitter:description" content="【干源码】集合框架  数据结构（零）概述​    本专题将会给大家来带Java最实用的东西—==集合框架==，并将会直接从源码入手，直接==干源码==！由于集合框架的底层离不开==数据结构==，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。 ​    数据结构可以说是计算机入门==必修课程==，同时也是特别==烧脑==的纯理">
-<meta name="twitter:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/shujujiegou.png">
+<meta name="twitter:description" content="【干源码】集合框架  数据结构（零）概述​    本专题将会给大家来带Java最实用的东西—集合框架，并将会直接从源码入手，直接干源码！由于集合框架的底层离不开数据结构，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。 ​    数据结构可以说是计算机入门必修课程，同时也是特别烧脑的纯理论知识。所以本篇将会尽量避开让人看不懂的">
+<meta name="twitter:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/huangshang.jpg">
 
 
 
@@ -144,7 +143,7 @@
 
 
 
-  <title>【干源码】集合框架  数据结构（零） | AlexBLOG</title>
+  <title>【干源码】集合框架  数据结构（零） | AlexBlog</title>
   
 
 
@@ -174,7 +173,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">AlexBLOG</span>
+        <span class="site-title">AlexBlog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -334,7 +333,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AlexBLOG">
+      <meta itemprop="name" content="AlexBlog">
     </span>
 
     
@@ -428,16 +427,16 @@
       
 
       
-        <h1 id="【干源码】集合框架-数据结构（零）"><a href="#【干源码】集合框架-数据结构（零）" class="headerlink" title="【干源码】集合框架  数据结构（零）"></a>【干源码】集合框架  数据结构（零）</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>​    本专题将会给大家来带Java最实用的东西—==集合框架==，并将会直接从源码入手，直接==干源码==！由于集合框架的底层离不开==数据结构==，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。</p>
-<p>​    数据结构可以说是计算机入门==必修课程==，同时也是特别==烧脑==的纯理论知识。所以本篇将会尽量==避开==让人看不懂的奇奇怪怪的东西，以生动形象的图文并茂带你==窥探==神秘的数据结构。<br><a id="more"></a></p>
+        <h1 id="【干源码】集合框架-数据结构（零）"><a href="#【干源码】集合框架-数据结构（零）" class="headerlink" title="【干源码】集合框架  数据结构（零）"></a>【干源码】集合框架  数据结构（零）</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>​    本专题将会给大家来带Java最实用的东西—集合框架，并将会直接从源码入手，直接干源码！由于集合框架的底层离不开数据结构，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。</p>
+<p>​    数据结构可以说是计算机入门必修课程，同时也是特别烧脑的纯理论知识。所以本篇将会尽量避开让人看不懂的奇奇怪怪的东西，以生动形象的图文并茂带你窥探神秘的数据结构。<br><a id="more"></a></p>
 <h2 id="什么是数据结构？"><a href="#什么是数据结构？" class="headerlink" title="什么是数据结构？"></a>什么是数据结构？</h2><blockquote>
 <p><strong>数据结构是计算机存储、组织数据的方式。数据结构是指相互之间存在着一种或多种关系的数据元素的集合和该集合中数据元素之间的关系组成。通常情况下，精心选择的数据结构可以带来更高的运行或者存储效率。</strong></p>
 <p>–《百度百科》</p>
 </blockquote>
 <p>科学家和人类应该不是一个物种，他们定义的名词读起来都比较拗口、而且十分不好理解。</p>
 <p>什么是数据结构，举个通俗易懂的例子：</p>
-<p>比如在现实世界里，你、我、其他所有人都属于==数据元素==，我们每个人之间都存在着错综复杂的==关系==。就好比：你是大名鼎鼎的太子、拥有至高无上的权利和无尽的财富，而我是个小小的皇上，我们之间就所形成的关系就是==数据结构==。</p>
-<h2 id="数据结构分为三个部分"><a href="#数据结构分为三个部分" class="headerlink" title="数据结构分为三个部分"></a>数据结构分为三个部分</h2><p><img src="img/blog0/shujujiegou.png" alt=""></p>
+<p>比如在现实世界里，你、我、其他所有人都属于数据元素，我们每个人之间都存在着错综复杂的关系。就好比：你是大名鼎鼎的太子、拥有至高无上的权利和无尽的财富，而我是个小小的皇上，我们之间就所形成的关系就是数据结构。</p>
+<h2 id="数据结构分为三个部分"><a href="#数据结构分为三个部分" class="headerlink" title="数据结构分为三个部分"></a>数据结构分为三个部分</h2>
 <p>可能有人会有疑问，数据结构和算法有什么关系呢？其实，数据结构和算法是相辅相成的，在计算机领域里面，谁也离不开谁。倘若失去了数据结构，算法会显得无比空洞；抛开算法，数据结构将会变成摆设！本篇将主要介绍逻辑结构和物理结构，至于算法会在后续章节，具体问题详细分析。</p>
 <h3 id="一、逻辑结构"><a href="#一、逻辑结构" class="headerlink" title="一、逻辑结构"></a><strong>一、逻辑结构</strong></h3><p>逻辑结构简单来说是指数据元素之间的前后件关系，主要包括4类。</p>
 <h4 id="1-集合结构"><a href="#1-集合结构" class="headerlink" title="1.集合结构"></a>1.<strong>集合结构</strong></h4><p>数据结构之间除了“属于同集合” 的关系外，别无其他关系。</p>

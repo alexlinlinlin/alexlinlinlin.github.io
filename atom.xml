@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>AlexBLOG</title>
+  <title>AlexBlog</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.alexlin.club/blog/"/>
-  <updated>2018-10-13T14:24:34.277Z</updated>
+  <updated>2018-10-13T14:48:27.524Z</updated>
   <id>www.alexlin.club/blog/</id>
   
   <author>
@@ -21,12 +21,12 @@
     <link href="www.alexlin.club/blog/2018/10/08/%E3%80%90%E5%B9%B2%E6%BA%90%E7%A0%81%E3%80%91%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%20%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%88%E9%9B%B6%EF%BC%89/"/>
     <id>www.alexlin.club/blog/2018/10/08/【干源码】集合框架  数据结构（零）/</id>
     <published>2018-10-08T14:47:37.000Z</published>
-    <updated>2018-10-13T14:24:34.277Z</updated>
+    <updated>2018-10-13T14:48:27.524Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;【干源码】集合框架-数据结构（零）&quot;&gt;&lt;a href=&quot;#【干源码】集合框架-数据结构（零）&quot; class=&quot;headerlink&quot; title=&quot;【干源码】集合框架  数据结构（零）&quot;&gt;&lt;/a&gt;【干源码】集合框架  数据结构（零）&lt;/h1&gt;&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;​    本专题将会给大家来带Java最实用的东西—==集合框架==，并将会直接从源码入手，直接==干源码==！由于集合框架的底层离不开==数据结构==，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。&lt;/p&gt;
-&lt;p&gt;​    数据结构可以说是计算机入门==必修课程==，同时也是特别==烧脑==的纯理论知识。所以本篇将会尽量==避开==让人看不懂的奇奇怪怪的东西，以生动形象的图文并茂带你==窥探==神秘的数据结构。&lt;br&gt;
+      &lt;h1 id=&quot;【干源码】集合框架-数据结构（零）&quot;&gt;&lt;a href=&quot;#【干源码】集合框架-数据结构（零）&quot; class=&quot;headerlink&quot; title=&quot;【干源码】集合框架  数据结构（零）&quot;&gt;&lt;/a&gt;【干源码】集合框架  数据结构（零）&lt;/h1&gt;&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;​    本专题将会给大家来带Java最实用的东西—集合框架，并将会直接从源码入手，直接干源码！由于集合框架的底层离不开数据结构，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。&lt;/p&gt;
+&lt;p&gt;​    数据结构可以说是计算机入门必修课程，同时也是特别烧脑的纯理论知识。所以本篇将会尽量避开让人看不懂的奇奇怪怪的东西，以生动形象的图文并茂带你窥探神秘的数据结构。&lt;br&gt;
     
     </summary>
     
