@@ -74,6 +74,8 @@
 
 
 
+  <link rel="alternate" href="/atom.xml" title="AlexBLOG" type="application/atom+xml" />
+
 
 
 
@@ -81,7 +83,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="AlexBLOG">
-<meta property="og:url" content="www.alexlin.club/index.html">
+<meta property="og:url" content="www.alexlin.club/blog/index.html">
 <meta property="og:site_name" content="AlexBLOG">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
@@ -115,7 +117,7 @@
 
 
 
-  <link rel="canonical" href="www.alexlin.club/"/>
+  <link rel="canonical" href="www.alexlin.club/blog/"/>
 
 
 
@@ -246,11 +248,55 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
 
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
       
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -279,12 +325,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="www.alexlin.club/2018/10/08/【干源码】集合框架  数据结构（零）/">
+    <link itemprop="mainEntityOfPage" href="www.alexlin.club/blog/2018/10/08/【干源码】集合框架  数据结构（零）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Alex Lin">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/luxun.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -321,317 +367,38 @@
           </span>
 
           
-
-          
+            <span class="post-category" >
             
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="【干源码】集合框架-数据结构（零）"><a href="#【干源码】集合框架-数据结构（零）" class="headerlink" title="【干源码】集合框架  数据结构（零）"></a>【干源码】集合框架  数据结构（零）</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>​    本专题将会给大家来带Java最实用的东西—==集合框架==，并将会直接从源码入手，直接==干源码==！由于集合框架的底层离不开==数据结构==，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。</p>
-<p>​    数据结构可以说是计算机入门==必修课程==，同时也是特别==烧脑==的纯理论知识。所以本篇将会尽量==避开==让人看不懂的奇奇怪怪的东西，以生动形象的图文并茂带你==窥探==神秘的数据结构。</p>
-<h2 id="什么是数据结构？"><a href="#什么是数据结构？" class="headerlink" title="什么是数据结构？"></a>什么是数据结构？</h2><blockquote>
-<p><strong>数据结构是计算机存储、组织数据的方式。数据结构是指相互之间存在着一种或多种关系的数据元素的集合和该集合中数据元素之间的关系组成。通常情况下，精心选择的数据结构可以带来更高的运行或者存储效率。</strong></p>
-<p>–《百度百科》</p>
-</blockquote>
-<p>科学家和人类应该不是一个物种，他们定义的名词读起来都比较拗口、而且十分不好理解。</p>
-<p>什么是数据结构，举个通俗易懂的例子：</p>
-<p>比如在现实世界里，你、我、其他所有人都属于==数据元素==，我们每个人之间都存在着错综复杂的==关系==。就好比：你是大名鼎鼎的太子、拥有至高无上的权利和无尽的财富，而我是个小小的皇上，我们之间就所形成的关系就是==数据结构==。</p>
-<h2 id="数据结构分为三个部分"><a href="#数据结构分为三个部分" class="headerlink" title="数据结构分为三个部分"></a>数据结构分为三个部分</h2><p><img src="img/blog0/shujujiegou.png" alt=""></p>
-<p>可能有人会有疑问，数据结构和算法有什么关系呢？其实，数据结构和算法是相辅相成的，在计算机领域里面，谁也离不开谁。倘若失去了数据结构，算法会显得无比空洞；抛开算法，数据结构将会变成摆设！本篇将主要介绍逻辑结构和物理结构，至于算法会在后续章节，具体问题详细分析。</p>
-<h3 id="一、逻辑结构"><a href="#一、逻辑结构" class="headerlink" title="一、逻辑结构"></a><strong>一、逻辑结构</strong></h3><p>逻辑结构简单来说是指数据元素之间的前后件关系，主要包括4类。</p>
-<h4 id="1-集合结构"><a href="#1-集合结构" class="headerlink" title="1.集合结构"></a>1.<strong>集合结构</strong></h4><p>数据结构之间除了“属于同集合” 的关系外，别无其他关系。</p>
-<p><img src="img/blog0/huangshang.jpg" alt=""></p>
-<p>   上图所有人（数据元素）同属于一个皇宫（集合）</p>
-<h4 id="2-线性结构"><a href="#2-线性结构" class="headerlink" title="2.线性结构"></a>2.<strong>线性结构</strong></h4><p>数据结构之间的元素是一对一的关系。</p>
-<p><img src="img\blog0\xianxing.jpg" alt=""></p>
-<p>   上图为一对一的线性结构，例子：数组、链表、栈和队列</p>
-<h4 id="3-树形结构"><a href="#3-树形结构" class="headerlink" title="3.树形结构"></a>3.<strong>树形结构</strong></h4><p>数据结构之间的元素存在一对多的相互关系</p>
-<p><img src="img/blog0/shu.jpg" alt=""></p>
-<p>上图所示为一对多的树形结构，举例：二叉树、红黑树</p>
-<h4 id="4-图形结构"><a href="#4-图形结构" class="headerlink" title="4.图形结构"></a>4.<strong>图形结构</strong></h4><p>数据结构中的元素存在多对多的相互关系。</p>
-<p><img src="img/blog0/tuxing.jpg" alt=""></p>
-<p>如上图所示，虽关系略微复杂，却反映出图形结构多对多的关系。</p>
-<p>​    </p>
-<h3 id="二、物理结构"><a href="#二、物理结构" class="headerlink" title="二、物理结构"></a><strong>二、物理结构</strong></h3><p>指数据的逻辑结构在计算机存储空间的存放形式。</p>
-<p>（提醒：该部分为本篇的重点，也是后面篇章讲解集合框架所依赖的东西。本篇将由浅入深、循序渐进，后面在具体讲到某 一个具体集合类时，会结合具体的方法来解读对应的储存结构）</p>
-<p>通常来说数据的物理结构分为四类：</p>
-<h4 id="1-顺序存储结构"><a href="#1-顺序存储结构" class="headerlink" title="1.顺序存储结构"></a>1.顺序存储结构</h4><p>把逻辑上相邻的结点存储在物理位置上相邻的存储单元中，结点之间的逻辑关系由存储单元的邻接关系来体现。</p>
-<p><img src="img/blog0/sx1.png" alt=""></p>
-<p>好比↑：国王和士兵们一起去菜市场排队买苹果，此时他们排成一对，紧紧的站在一起，就形成了一个顺序存储结构。</p>
-<p>   <strong>优点</strong>：查询元素效率高<br>   因为顺序存储结构在逻辑和物理都是相邻的排序，所以找第几个士兵，直接就可以定位到目标。</p>
-<p>   <strong>缺点</strong>：插入和删除元素效率低(随机位置)</p>
-<p>   由于此结构的特性，每次插入和删除都要使整一个存储结构前移或者后移，相当影响性能。</p>
-<p>   举个例子↓，假设你是大名鼎鼎的太子，拥有至高无上的权利和地位，你路过菜市场，看到大家都在排队买苹果，你也跟风要买。你不仅要买还要插队，大家没办法只能默默的往后退一步，让出第一的位置给你，这过程体现了顺序存储结构插入的效率低下。</p>
-<p>   <img src="img/blog0/sxg1.gif" alt=""></p>
-<p>   删除元素也同理↓，国王在队伍后面目睹了这一切，下令处死太子，太子就被拉出去枪毙了，大家又依次往前一步。</p>
-<p>   <img src="img/blog0/sx3.gif" alt=""></p>
-<h4 id="2-链式存储结构"><a href="#2-链式存储结构" class="headerlink" title="2.链式存储结构"></a>2.链式存储结构</h4><p>在计算机中用一组任意的存储单元存储线性表的数据元素，结点间的逻辑关系是由附加的指针字段表示。<br>简单来讲，逻辑上相邻的数据元素，在物理结构上可以随意存放，不要求物理结构相邻，同时每个逻辑相连的元素手里都拿着一把指针指向下一个元素。</p>
-<p><img src="img/blog0/lb.png" alt=""></p>
-<p>就比如↑：国王和太子们乘坐搭巴士，上了巴士之后不一定要找两个相邻的位置，有位置就可以坐。国王只需记住第一个太子的位置，每一个太子都只记着下一个太子的位置，就形成了一个链式储存结构。</p>
-<p><strong>优点</strong>：插入和删除元素效率高(随机位置)           </p>
-<p>如上图所示↓，如果此时皇后也上了巴士，且皇后要坐在国王的下一个位                  置，那么只需要将国王的指针指向皇后，皇后的指针指向A太子，就插入成功！</p>
-<p><img src="img/blog0/lbg.gif" alt=""></p>
-<p><strong>缺点</strong>：查找元素效率低<br>由于链式存储结构的特性，如果你要找到D太子，你必须先找到C太子，要找到C太子必须先找到B太子，以此类推，你要先找到国王，再从国王指引的方向一个一个找过去。</p>
-<h4 id="3-索引存储结构"><a href="#3-索引存储结构" class="headerlink" title="3.索引存储结构"></a>3.索引存储结构</h4><p>索引存储结构是用结点的索引号来确定结点存储地址,其优点是检索速度快,缺点是增加了附加的索引表,会占用较多的存储空间。</p>
-<p>索引存储结构由于其除了数据元素本身之外，还额外创建索引表，索引表的每个节点包含了索引键值和指针，如下图所示↓（以二叉树为索引表）</p>
-<p><img src="img/blog0/sy.png" alt=""></p>
-<p>国王记性不好，记不住每一个人的地址，所以额外创建了一个索引表，方便快速定位。比如今晚想找尼姑一起研究数据结构，不用一个一个房间去敲门，只需要找到索引表的尼姑，就可以找到尼姑的具体地址。</p>
-<p>   优点：数据检索的速度快</p>
-<p>   缺点：</p>
-<ol>
-<li><p>创建索引需要占用物理空间和消耗时间</p>
-</li>
-<li><p>对数据元素进行维护的同时，索引表也需要进行维护，影响性能</p>
-</li>
-</ol>
-<h4 id="4-散列存储结构"><a href="#4-散列存储结构" class="headerlink" title="4.散列存储结构"></a>4.散列存储结构</h4><p><strong>定义</strong>：实质上就是通过节点的关键字，再通过某一特定的计算，算出该关键字对应的物理地址。</p>
-<p><strong>散列（哈希）表</strong>：用散列法存储的线性结构被称为散列表或者哈希表，使用的函数f(k)被称为散列函数或者哈希函数，f(k)的值被称为散列地址或者哈希地址。通常情况下，散列表的存储空间是一个一维数组，而其哈希地址为数组的下标。</p>
-<p>举个栗子：国王希望将皇宫内所有女性，按照某些指数，进行计算、分类如下图↓</p>
-<p><img src="img/blog0/hash1.png" alt=""></p>
-<p>将每个节点元素通过散列函数f(k)计算出地址，并存放到相应的位置，如此就形成了哈希表。</p>
-<p><img src="img/blog0/hash2.png" alt=""></p>
-<p>比如查询”尼姑”数据是否存在时，只需要根据”尼姑”的”三围”，计算出”尼姑”的地址C，即可直接获取尼姑。</p>
-<p><strong>优点</strong>：散列结构的查找、插入、删除效率高。</p>
-<p><strong>缺点</strong>:   不支持排序、比用线性表存储需要更多的空间、基于数组的散列表扩展比较麻烦。</p>
-<p>（笔者感慨：散列存储结构可以说是一件艺术品，在这里不得不佩服科学家们。网上有一种说法：Hash是一名科学家，由他提出了散列算法，所以命名为Hash算法。可是查无此人，知道的可以留言告诉我一下）</p>
-<h3 id="三、算法"><a href="#三、算法" class="headerlink" title="三、算法"></a>三、算法</h3><p>​    后面章节会具体简介</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本篇内容可以总结为下图</p>
-<p><img src="img/blog0/zongjie.png" alt=""></p>
-<p>数据结构的应用：</p>
-<p><img src="img/blog0/zongjie2.png" alt=""></p>
-<p>这些内容可以说是古代劳动人民智慧的结晶，很多数据结构我们都可以直接拿来用。但是！这些计算机底层的东西，一定不能被动地记忆，要辩证地思考，上面的一切都不是真理，可能随着时间会慢慢被改进或者淘汰。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="www.alexlin.club/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本 (2)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Alex Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AlexBLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本 (2)/" itemprop="url">我个人博客的第一篇博客，哈哈哈...</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+              <span class="post-meta-divider">|</span>
             
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">分类于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-07T14:47:37+08:00">
-                2018-10-07
-              </time>
-            
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Diary/" itemprop="url" rel="index">
+                    <span itemprop="name">Diary</span>
+                  </a>
+                </span>
 
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="大家好"><a href="#大家好" class="headerlink" title="大家好"></a>大家好</h1><p>测试！</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="www.alexlin.club/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Alex Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AlexBLOG">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本/" itemprop="url">我个人博客的第一篇博客，哈哈哈...</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
+                
+                  ， 
+                
               
-                <span class="post-meta-item-text">发表于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Diary/Life/" itemprop="url" rel="index">
+                    <span itemprop="name">Life</span>
+                  </a>
+                </span>
+
+                
+                
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-07T14:47:37+08:00">
-                2018-10-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
+            </span>
           
 
           
@@ -642,7 +409,7 @@
           
 
           
-
+          
           
 
           
@@ -661,10 +428,15 @@
 
       
         
-          
-            <h1 id="大家好"><a href="#大家好" class="headerlink" title="大家好"></a>大家好</h1><p>测试！</p>
-
-          
+          <h1 id="【干源码】集合框架-数据结构（零）"><a href="#【干源码】集合框架-数据结构（零）" class="headerlink" title="【干源码】集合框架  数据结构（零）"></a>【干源码】集合框架  数据结构（零）</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>​    本专题将会给大家来带Java最实用的东西—==集合框架==，并将会直接从源码入手，直接==干源码==！由于集合框架的底层离不开==数据结构==，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。</p>
+<p>​    数据结构可以说是计算机入门==必修课程==，同时也是特别==烧脑==的纯理论知识。所以本篇将会尽量==避开==让人看不懂的奇奇怪怪的东西，以生动形象的图文并茂带你==窥探==神秘的数据结构。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/08/【干源码】集合框架  数据结构（零）/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -711,12 +483,12 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="www.alexlin.club/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本 (3)/">
+    <link itemprop="mainEntityOfPage" href="www.alexlin.club/blog/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本 (3)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Alex Lin">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/luxun.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -762,7 +534,7 @@
           
 
           
-
+          
           
 
           
@@ -831,12 +603,252 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="www.alexlin.club/2018/10/07/我个人博客的第一篇博客，哈哈哈/">
+    <link itemprop="mainEntityOfPage" href="www.alexlin.club/blog/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本 (2)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Alex Lin">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/luxun.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AlexBLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本 (2)/" itemprop="url">我个人博客的第一篇博客，哈哈哈...</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-07T14:47:37+08:00">
+                2018-10-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="大家好"><a href="#大家好" class="headerlink" title="大家好"></a>大家好</h1><p>测试！</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="www.alexlin.club/blog/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Alex Lin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/luxun.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AlexBLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/07/我个人博客的第一篇博客，哈哈哈 - 副本/" itemprop="url">我个人博客的第一篇博客，哈哈哈...</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-07T14:47:37+08:00">
+                2018-10-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+          
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="大家好"><a href="#大家好" class="headerlink" title="大家好"></a>大家好</h1><p>测试！</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="www.alexlin.club/blog/2018/10/07/我个人博客的第一篇博客，哈哈哈/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Alex Lin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/luxun.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -882,7 +894,7 @@
           
 
           
-
+          
           
 
           
@@ -973,6 +985,10 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="/images/luxun.jpg"
+                alt="Alex Lin" />
+            
               <p class="site-author-name" itemprop="name">Alex Lin</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
@@ -991,11 +1007,36 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
 
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
           
 
           
@@ -1044,6 +1085,19 @@
 
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+<div>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style='display:none'>
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style='display:none'>
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
 
 
 
@@ -1186,6 +1240,323 @@
 
 
   
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 
