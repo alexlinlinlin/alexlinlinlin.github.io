@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="java,集合框架,源码," />
+  <meta name="keywords" content="java,集合框架,源码,数据结构," />
 
 
 
@@ -81,33 +81,34 @@
 
 
 
-<meta name="description" content="【干源码】集合框架  数据结构（零）概述​    本专题将会给大家来带Java最实用的东西—集合框架，并将会直接从源码入手，直接干源码！由于集合框架的底层离不开数据结构，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。 ​    数据结构可以说是计算机入门必修课程，同时也是特别烧脑的纯理论知识。所以本篇将会尽量避开让人看不懂的">
-<meta name="keywords" content="java,集合框架,源码">
+<meta name="description" content="概述​    本专题将会给大家来带Java最实用的东西—集合框架，并将会直接从源码入手，直接干源码！由于集合框架的底层离不开数据结构，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。 ​    数据结构可以说是计算机入门必修课程，同时也是特别烧脑的纯理论知识。所以本篇将会尽量避开让人看不懂的奇奇怪怪的东西，以生动形象的图文并茂">
+<meta name="keywords" content="java,集合框架,源码,数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【干源码】集合框架  数据结构（零）">
+<meta property="og:title" content="【干了这杯源码】集合框架  数据结构（零）">
 <meta property="og:url" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架  数据结构（零）/index.html">
 <meta property="og:site_name" content="AlexBlog">
-<meta property="og:description" content="【干源码】集合框架  数据结构（零）概述​    本专题将会给大家来带Java最实用的东西—集合框架，并将会直接从源码入手，直接干源码！由于集合框架的底层离不开数据结构，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。 ​    数据结构可以说是计算机入门必修课程，同时也是特别烧脑的纯理论知识。所以本篇将会尽量避开让人看不懂的">
+<meta property="og:description" content="概述​    本专题将会给大家来带Java最实用的东西—集合框架，并将会直接从源码入手，直接干源码！由于集合框架的底层离不开数据结构，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。 ​    数据结构可以说是计算机入门必修课程，同时也是特别烧脑的纯理论知识。所以本篇将会尽量避开让人看不懂的奇奇怪怪的东西，以生动形象的图文并茂">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/huangshang.jpg">
-<meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/xianxing.jpg">
-<meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/shu.jpg">
-<meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/tuxing.jpg">
-<meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/sx1.png">
-<meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/sxg1.gif">
-<meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/sx3.gif">
-<meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/lb.png">
-<meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/lbg.gif">
-<meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/sy.png">
-<meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/hash1.png">
-<meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/hash2.png">
-<meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/zongjie.png">
-<meta property="og:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/zongjie2.png">
-<meta property="og:updated_time" content="2018-10-13T14:48:27.524Z">
+<meta property="og:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/shujujiegou.png">
+<meta property="og:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/huangshang.jpg">
+<meta property="og:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/xianxing.jpg">
+<meta property="og:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/shu.jpg">
+<meta property="og:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/tuxing.jpg">
+<meta property="og:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/sx1.png">
+<meta property="og:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/sxg1.gif">
+<meta property="og:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/sx3.gif">
+<meta property="og:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/lb.png">
+<meta property="og:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/lbg.gif">
+<meta property="og:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/sy.png">
+<meta property="og:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/hash1.png">
+<meta property="og:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/hash2.png">
+<meta property="og:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/zongjie.png">
+<meta property="og:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/zongjie2.png">
+<meta property="og:updated_time" content="2018-10-23T14:44:45.857Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【干源码】集合框架  数据结构（零）">
-<meta name="twitter:description" content="【干源码】集合框架  数据结构（零）概述​    本专题将会给大家来带Java最实用的东西—集合框架，并将会直接从源码入手，直接干源码！由于集合框架的底层离不开数据结构，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。 ​    数据结构可以说是计算机入门必修课程，同时也是特别烧脑的纯理论知识。所以本篇将会尽量避开让人看不懂的">
-<meta name="twitter:image" content="www.alexlin.club/blog/2018/10/08/【干源码】集合框架%20%20数据结构（零）/img/blog0/huangshang.jpg">
+<meta name="twitter:title" content="【干了这杯源码】集合框架  数据结构（零）">
+<meta name="twitter:description" content="概述​    本专题将会给大家来带Java最实用的东西—集合框架，并将会直接从源码入手，直接干源码！由于集合框架的底层离不开数据结构，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。 ​    数据结构可以说是计算机入门必修课程，同时也是特别烧脑的纯理论知识。所以本篇将会尽量避开让人看不懂的奇奇怪怪的东西，以生动形象的图文并茂">
+<meta name="twitter:image" content="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/shujujiegou.png">
 
 
 
@@ -143,7 +144,7 @@
 
 
 
-  <title>【干源码】集合框架  数据结构（零） | AlexBlog</title>
+  <title>【干了这杯源码】集合框架  数据结构（零） | AlexBlog</title>
   
 
 
@@ -341,7 +342,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【干源码】集合框架  数据结构（零）</h1>
+          <h1 class="post-title" itemprop="name headline">【干了这杯源码】集合框架  数据结构（零）</h1>
         
 
         <div class="post-meta">
@@ -376,8 +377,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Diary/" itemprop="url" rel="index">
-                    <span itemprop="name">Diary</span>
+                  <a href="/categories/计算机/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机</span>
                   </a>
                 </span>
 
@@ -387,8 +388,19 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Diary/Life/" itemprop="url" rel="index">
-                    <span itemprop="name">Life</span>
+                  <a href="/categories/计算机/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/计算机/Java/干了这杯源码/" itemprop="url" rel="index">
+                    <span itemprop="name">干了这杯源码</span>
                   </a>
                 </span>
 
@@ -427,7 +439,7 @@
       
 
       
-        <h1 id="【干源码】集合框架-数据结构（零）"><a href="#【干源码】集合框架-数据结构（零）" class="headerlink" title="【干源码】集合框架  数据结构（零）"></a>【干源码】集合框架  数据结构（零）</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>​    本专题将会给大家来带Java最实用的东西—集合框架，并将会直接从源码入手，直接干源码！由于集合框架的底层离不开数据结构，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。</p>
+        <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>​    本专题将会给大家来带Java最实用的东西—集合框架，并将会直接从源码入手，直接干源码！由于集合框架的底层离不开数据结构，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。</p>
 <p>​    数据结构可以说是计算机入门必修课程，同时也是特别烧脑的纯理论知识。所以本篇将会尽量避开让人看不懂的奇奇怪怪的东西，以生动形象的图文并茂带你窥探神秘的数据结构。<br><a id="more"></a></p>
 <h2 id="什么是数据结构？"><a href="#什么是数据结构？" class="headerlink" title="什么是数据结构？"></a>什么是数据结构？</h2><blockquote>
 <p><strong>数据结构是计算机存储、组织数据的方式。数据结构是指相互之间存在着一种或多种关系的数据元素的集合和该集合中数据元素之间的关系组成。通常情况下，精心选择的数据结构可以带来更高的运行或者存储效率。</strong></p>
@@ -436,45 +448,45 @@
 <p>科学家和人类应该不是一个物种，他们定义的名词读起来都比较拗口、而且十分不好理解。</p>
 <p>什么是数据结构，举个通俗易懂的例子：</p>
 <p>比如在现实世界里，你、我、其他所有人都属于数据元素，我们每个人之间都存在着错综复杂的关系。就好比：你是大名鼎鼎的太子、拥有至高无上的权利和无尽的财富，而我是个小小的皇上，我们之间就所形成的关系就是数据结构。</p>
-<h2 id="数据结构分为三个部分"><a href="#数据结构分为三个部分" class="headerlink" title="数据结构分为三个部分"></a>数据结构分为三个部分</h2>
+<h2 id="数据结构分为三个部分"><a href="#数据结构分为三个部分" class="headerlink" title="数据结构分为三个部分"></a>数据结构分为三个部分</h2><img src="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/shujujiegou.png">
 <p>可能有人会有疑问，数据结构和算法有什么关系呢？其实，数据结构和算法是相辅相成的，在计算机领域里面，谁也离不开谁。倘若失去了数据结构，算法会显得无比空洞；抛开算法，数据结构将会变成摆设！本篇将主要介绍逻辑结构和物理结构，至于算法会在后续章节，具体问题详细分析。</p>
 <h3 id="一、逻辑结构"><a href="#一、逻辑结构" class="headerlink" title="一、逻辑结构"></a><strong>一、逻辑结构</strong></h3><p>逻辑结构简单来说是指数据元素之间的前后件关系，主要包括4类。</p>
 <h4 id="1-集合结构"><a href="#1-集合结构" class="headerlink" title="1.集合结构"></a>1.<strong>集合结构</strong></h4><p>数据结构之间除了“属于同集合” 的关系外，别无其他关系。</p>
-<p><img src="img/blog0/huangshang.jpg" alt=""></p>
+<img src="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/huangshang.jpg">
 <p>   上图所有人（数据元素）同属于一个皇宫（集合）</p>
 <h4 id="2-线性结构"><a href="#2-线性结构" class="headerlink" title="2.线性结构"></a>2.<strong>线性结构</strong></h4><p>数据结构之间的元素是一对一的关系。</p>
-<p><img src="img\blog0\xianxing.jpg" alt=""></p>
+<img src="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/xianxing.jpg">
 <p>   上图为一对一的线性结构，例子：数组、链表、栈和队列</p>
 <h4 id="3-树形结构"><a href="#3-树形结构" class="headerlink" title="3.树形结构"></a>3.<strong>树形结构</strong></h4><p>数据结构之间的元素存在一对多的相互关系</p>
-<p><img src="img/blog0/shu.jpg" alt=""></p>
+<img src="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/shu.jpg">
 <p>上图所示为一对多的树形结构，举例：二叉树、红黑树</p>
 <h4 id="4-图形结构"><a href="#4-图形结构" class="headerlink" title="4.图形结构"></a>4.<strong>图形结构</strong></h4><p>数据结构中的元素存在多对多的相互关系。</p>
-<p><img src="img/blog0/tuxing.jpg" alt=""></p>
+<img src="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/tuxing.jpg">
 <p>如上图所示，虽关系略微复杂，却反映出图形结构多对多的关系。</p>
 <p>​    </p>
 <h3 id="二、物理结构"><a href="#二、物理结构" class="headerlink" title="二、物理结构"></a><strong>二、物理结构</strong></h3><p>指数据的逻辑结构在计算机存储空间的存放形式。</p>
 <p>（提醒：该部分为本篇的重点，也是后面篇章讲解集合框架所依赖的东西。本篇将由浅入深、循序渐进，后面在具体讲到某 一个具体集合类时，会结合具体的方法来解读对应的储存结构）</p>
 <p>通常来说数据的物理结构分为四类：</p>
 <h4 id="1-顺序存储结构"><a href="#1-顺序存储结构" class="headerlink" title="1.顺序存储结构"></a>1.顺序存储结构</h4><p>把逻辑上相邻的结点存储在物理位置上相邻的存储单元中，结点之间的逻辑关系由存储单元的邻接关系来体现。</p>
-<p><img src="img/blog0/sx1.png" alt=""></p>
+<img src="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/sx1.png">
 <p>好比↑：国王和士兵们一起去菜市场排队买苹果，此时他们排成一对，紧紧的站在一起，就形成了一个顺序存储结构。</p>
 <p>   <strong>优点</strong>：查询元素效率高<br>   因为顺序存储结构在逻辑和物理都是相邻的排序，所以找第几个士兵，直接就可以定位到目标。</p>
 <p>   <strong>缺点</strong>：插入和删除元素效率低(随机位置)</p>
 <p>   由于此结构的特性，每次插入和删除都要使整一个存储结构前移或者后移，相当影响性能。</p>
 <p>   举个例子↓，假设你是大名鼎鼎的太子，拥有至高无上的权利和地位，你路过菜市场，看到大家都在排队买苹果，你也跟风要买。你不仅要买还要插队，大家没办法只能默默的往后退一步，让出第一的位置给你，这过程体现了顺序存储结构插入的效率低下。</p>
-<p>   <img src="img/blog0/sxg1.gif" alt=""></p>
+<img src="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/sxg1.gif">
 <p>   删除元素也同理↓，国王在队伍后面目睹了这一切，下令处死太子，太子就被拉出去枪毙了，大家又依次往前一步。</p>
-<p>   <img src="img/blog0/sx3.gif" alt=""></p>
+<img src="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/sx3.gif">
 <h4 id="2-链式存储结构"><a href="#2-链式存储结构" class="headerlink" title="2.链式存储结构"></a>2.链式存储结构</h4><p>在计算机中用一组任意的存储单元存储线性表的数据元素，结点间的逻辑关系是由附加的指针字段表示。<br>简单来讲，逻辑上相邻的数据元素，在物理结构上可以随意存放，不要求物理结构相邻，同时每个逻辑相连的元素手里都拿着一把指针指向下一个元素。</p>
-<p><img src="img/blog0/lb.png" alt=""></p>
+<img src="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/lb.png">
 <p>就比如↑：国王和太子们乘坐搭巴士，上了巴士之后不一定要找两个相邻的位置，有位置就可以坐。国王只需记住第一个太子的位置，每一个太子都只记着下一个太子的位置，就形成了一个链式储存结构。</p>
 <p><strong>优点</strong>：插入和删除元素效率高(随机位置)           </p>
 <p>如上图所示↓，如果此时皇后也上了巴士，且皇后要坐在国王的下一个位                  置，那么只需要将国王的指针指向皇后，皇后的指针指向A太子，就插入成功！</p>
-<p><img src="img/blog0/lbg.gif" alt=""></p>
+<img src="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/lbg.gif">
 <p><strong>缺点</strong>：查找元素效率低<br>由于链式存储结构的特性，如果你要找到D太子，你必须先找到C太子，要找到C太子必须先找到B太子，以此类推，你要先找到国王，再从国王指引的方向一个一个找过去。</p>
 <h4 id="3-索引存储结构"><a href="#3-索引存储结构" class="headerlink" title="3.索引存储结构"></a>3.索引存储结构</h4><p>索引存储结构是用结点的索引号来确定结点存储地址,其优点是检索速度快,缺点是增加了附加的索引表,会占用较多的存储空间。</p>
 <p>索引存储结构由于其除了数据元素本身之外，还额外创建索引表，索引表的每个节点包含了索引键值和指针，如下图所示↓（以二叉树为索引表）</p>
-<p><img src="img/blog0/sy.png" alt=""></p>
+<img src="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/sy.png">
 <p>国王记性不好，记不住每一个人的地址，所以额外创建了一个索引表，方便快速定位。比如今晚想找尼姑一起研究数据结构，不用一个一个房间去敲门，只需要找到索引表的尼姑，就可以找到尼姑的具体地址。</p>
 <p>   优点：数据检索的速度快</p>
 <p>   缺点：</p>
@@ -487,18 +499,18 @@
 <h4 id="4-散列存储结构"><a href="#4-散列存储结构" class="headerlink" title="4.散列存储结构"></a>4.散列存储结构</h4><p><strong>定义</strong>：实质上就是通过节点的关键字，再通过某一特定的计算，算出该关键字对应的物理地址。</p>
 <p><strong>散列（哈希）表</strong>：用散列法存储的线性结构被称为散列表或者哈希表，使用的函数f(k)被称为散列函数或者哈希函数，f(k)的值被称为散列地址或者哈希地址。通常情况下，散列表的存储空间是一个一维数组，而其哈希地址为数组的下标。</p>
 <p>举个栗子：国王希望将皇宫内所有女性，按照某些指数，进行计算、分类如下图↓</p>
-<p><img src="img/blog0/hash1.png" alt=""></p>
+<img src="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/hash1.png">
 <p>将每个节点元素通过散列函数f(k)计算出地址，并存放到相应的位置，如此就形成了哈希表。</p>
-<p><img src="img/blog0/hash2.png" alt=""></p>
+<img src="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/hash2.png">
 <p>比如查询”尼姑”数据是否存在时，只需要根据”尼姑”的”三围”，计算出”尼姑”的地址C，即可直接获取尼姑。</p>
 <p><strong>优点</strong>：散列结构的查找、插入、删除效率高。</p>
 <p><strong>缺点</strong>:   不支持排序、比用线性表存储需要更多的空间、基于数组的散列表扩展比较麻烦。</p>
 <p>（笔者感慨：散列存储结构可以说是一件艺术品，在这里不得不佩服科学家们。网上有一种说法：Hash是一名科学家，由他提出了散列算法，所以命名为Hash算法。可是查无此人，知道的可以留言告诉我一下）</p>
 <h3 id="三、算法"><a href="#三、算法" class="headerlink" title="三、算法"></a>三、算法</h3><p>​    后面章节会具体简介</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本篇内容可以总结为下图</p>
-<p><img src="img/blog0/zongjie.png" alt=""></p>
+<img src="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/zongjie.png">
 <p>数据结构的应用：</p>
-<p><img src="img/blog0/zongjie2.png" alt=""></p>
+<img src="/2018/10/08/【干源码】集合框架%20%20数据结构（零）/zongjie2.png">
 <p>这些内容可以说是古代劳动人民智慧的结晶，很多数据结构我们都可以直接拿来用。但是！这些计算机底层的东西，一定不能被动地记忆，要辩证地思考，上面的一切都不是真理，可能随着时间会慢慢被改进或者淘汰。</p>
 
       
@@ -547,6 +559,8 @@
           
             <a href="/tags/源码/" rel="tag"># 源码</a>
           
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+          
         </div>
       
 
@@ -567,6 +581,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/08/【干了这杯源码】集合框架-Collection接口介绍（一）/" rel="prev" title="【干了这杯源码】集合框架 Collection接口介绍（一）">
+                【干了这杯源码】集合框架 Collection接口介绍（一） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -647,7 +665,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -658,7 +676,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -669,7 +687,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -709,7 +727,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#【干源码】集合框架-数据结构（零）"><span class="nav-text">【干源码】集合框架  数据结构（零）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是数据结构？"><span class="nav-text">什么是数据结构？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据结构分为三个部分"><span class="nav-text">数据结构分为三个部分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、逻辑结构"><span class="nav-text">一、逻辑结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-集合结构"><span class="nav-text">1.集合结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-线性结构"><span class="nav-text">2.线性结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-树形结构"><span class="nav-text">3.树形结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-图形结构"><span class="nav-text">4.图形结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、物理结构"><span class="nav-text">二、物理结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-顺序存储结构"><span class="nav-text">1.顺序存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-链式存储结构"><span class="nav-text">2.链式存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-索引存储结构"><span class="nav-text">3.索引存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-散列存储结构"><span class="nav-text">4.散列存储结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、算法"><span class="nav-text">三、算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是数据结构？"><span class="nav-text">什么是数据结构？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据结构分为三个部分"><span class="nav-text">数据结构分为三个部分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、逻辑结构"><span class="nav-text">一、逻辑结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-集合结构"><span class="nav-text">1.集合结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-线性结构"><span class="nav-text">2.线性结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-树形结构"><span class="nav-text">3.树形结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-图形结构"><span class="nav-text">4.图形结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、物理结构"><span class="nav-text">二、物理结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-顺序存储结构"><span class="nav-text">1.顺序存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-链式存储结构"><span class="nav-text">2.链式存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-索引存储结构"><span class="nav-text">3.索引存储结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-散列存储结构"><span class="nav-text">4.散列存储结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、算法"><span class="nav-text">三、算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
