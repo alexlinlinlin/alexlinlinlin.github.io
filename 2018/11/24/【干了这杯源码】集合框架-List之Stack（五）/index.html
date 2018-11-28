@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="java,集合框架,源码,List,Stack,栈," />
 
 
 
@@ -81,13 +81,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="AlexBlog">
-<meta property="og:url" content="www.alexlin.club/blog/index.html">
+<meta name="description" content="Stack一 概述​    Stack英文意思为一大堆，Java JDK中的Stack类用于模拟数据结构中的栈。​    什么是栈结构，用最简单的比喻，栈结构就如同桌子上整齐堆叠的一些书本，当你存放的时候，必须一本一本的往上放(入栈)，当你取书的时候必须从最上面一本一本的往下拿(出栈)。​    所以，栈结构的特点是先进者后出，后进者先出，就是所谓的FILO( First In Last Out)">
+<meta name="keywords" content="java,集合框架,源码,List,Stack,栈">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【干了这杯源码】集合框架 List之Stack（五）">
+<meta property="og:url" content="www.alexlin.club/blog/2018/11/24/【干了这杯源码】集合框架-List之Stack（五）/index.html">
 <meta property="og:site_name" content="AlexBlog">
+<meta property="og:description" content="Stack一 概述​    Stack英文意思为一大堆，Java JDK中的Stack类用于模拟数据结构中的栈。​    什么是栈结构，用最简单的比喻，栈结构就如同桌子上整齐堆叠的一些书本，当你存放的时候，必须一本一本的往上放(入栈)，当你取书的时候必须从最上面一本一本的往下拿(出栈)。​    所以，栈结构的特点是先进者后出，后进者先出，就是所谓的FILO( First In Last Out)">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="/2018/11/24/【干了这杯源码】集合框架-List之Stack（五）/Stack.png">
+<meta property="og:updated_time" content="2018-11-28T12:48:20.175Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AlexBlog">
+<meta name="twitter:title" content="【干了这杯源码】集合框架 List之Stack（五）">
+<meta name="twitter:description" content="Stack一 概述​    Stack英文意思为一大堆，Java JDK中的Stack类用于模拟数据结构中的栈。​    什么是栈结构，用最简单的比喻，栈结构就如同桌子上整齐堆叠的一些书本，当你存放的时候，必须一本一本的往上放(入栈)，当你取书的时候必须从最上面一本一本的往下拿(出栈)。​    所以，栈结构的特点是先进者后出，后进者先出，就是所谓的FILO( First In Last Out)">
+<meta name="twitter:image" content="/2018/11/24/【干了这杯源码】集合框架-List之Stack（五）/Stack.png">
 
 
 
@@ -117,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="www.alexlin.club/blog/"/>
+  <link rel="canonical" href="www.alexlin.club/blog/2018/11/24/【干了这杯源码】集合框架-List之Stack（五）/"/>
 
 
 
 
 
-  <title>AlexBlog</title>
+  <title>【干了这杯源码】集合框架 List之Stack（五） | AlexBlog</title>
   
 
 
@@ -142,8 +149,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -290,9 +296,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -322,9 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/24/【干了这杯源码】集合框架-List之Stack（五）/" itemprop="url">【干了这杯源码】集合框架 List之Stack（五）</a></h1>
+          <h1 class="post-title" itemprop="name headline">【干了这杯源码】集合框架 List之Stack（五）</h1>
         
 
         <div class="post-meta">
@@ -401,173 +405,8 @@
 
           
           
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h1><h2 id="一-概述"><a href="#一-概述" class="headerlink" title="一 概述"></a>一 概述</h2><p>​    <strong>Stack</strong>英文意思为一大堆，Java JDK中的<strong>Stack</strong>类用于模拟数据结构中的栈。<br>​    什么是栈结构，用最简单的比喻，栈结构就如同桌子上整齐堆叠的一些书本，当你存放的时候，必须一本一本的往上放(入栈)，当你取书的时候必须从最上面一本一本的往下拿(出栈)。<br>​    所以，栈结构的特点是先进者后出，后进者先出，就是所谓的<strong>FILO</strong>( First In Last Out)。<br>​    <strong>Stack</strong> 继承于Vector类，所以<strong>Stack</strong>是一个线程安全的基于数组实现的栈结构。<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/24/【干了这杯源码】集合框架-List之Stack（五）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="www.alexlin.club/blog/2018/11/19/【干了这杯源码】集合框架-List之Vector（四）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Alex Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/luxun.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AlexBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/19/【干了这杯源码】集合框架-List之Vector（四）/" itemprop="url">【干了这杯源码】集合框架 List之Vector（四）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-19T18:47:37+08:00">
-                2018-11-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/Java/干了这杯源码/" itemprop="url" rel="index">
-                    <span itemprop="name">干了这杯源码</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_value_page_pv"></span>次阅读
           
           
 
@@ -586,17 +425,39 @@
       
 
       
-        
-          <h1 id="Vector"><a href="#Vector" class="headerlink" title="Vector"></a>Vector</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><img src="/2018/11/19/【干了这杯源码】集合框架-List之Vector（四）/Vector.png">
-<p>​    Vector来自于远古的JDK1.0，属于上古时期的类，因为其所有方法都上了同步锁，所以性能会比ArrayList低很多。<br>​    Vector和ArrayList一样实现了可自动扩充的数组，都可根据下标直接访问元素，另外Vector可以根据需求改变自动增长的策略，默认每次增为原来的一倍。<br>​    Vector是线程安全的，扫一眼源码你会发现，Vector很多方法都加了synchronized关键字，确保了线程的安全性。<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/19/【干了这杯源码】集合框架-List之Vector（四）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h1 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h1><h2 id="一-概述"><a href="#一-概述" class="headerlink" title="一 概述"></a>一 概述</h2><p>​    <strong>Stack</strong>英文意思为一大堆，Java JDK中的<strong>Stack</strong>类用于模拟数据结构中的栈。<br>​    什么是栈结构，用最简单的比喻，栈结构就如同桌子上整齐堆叠的一些书本，当你存放的时候，必须一本一本的往上放(入栈)，当你取书的时候必须从最上面一本一本的往下拿(出栈)。<br>​    所以，栈结构的特点是先进者后出，后进者先出，就是所谓的<strong>FILO</strong>( First In Last Out)。<br>​    <strong>Stack</strong> 继承于Vector类，所以<strong>Stack</strong>是一个线程安全的基于数组实现的栈结构。<br><a id="more"></a><br>​    提示：JDK中的<strong>Deque</strong>接口提供了一个更加优秀和实用的LIFO栈结构，用来替代Stack类:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`Deque stack = <span class="keyword">new</span> ArrayDeque();`</span><br></pre></td></tr></table></figure>
+<h3 id="Stack继承图"><a href="#Stack继承图" class="headerlink" title="Stack继承图"></a>Stack继承图</h3>   <img src="/2018/11/24/【干了这杯源码】集合框架-List之Stack（五）/Stack.png">
+<h2 id="二-Stack的属性"><a href="#二-Stack的属性" class="headerlink" title="二 Stack的属性"></a>二 Stack的属性</h2><p>​    由于Stack继承Vector类，所以Stack的属性就是Vector的属性，无额外属性。</p>
+<h3 id="1-elementData"><a href="#1-elementData" class="headerlink" title="1 elementData"></a>1 elementData</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//该属性为Object类型的空数组,是Stack的底层存储数组</span></span><br><span class="line"><span class="keyword">protected</span> Object[] elementData;</span><br></pre></td></tr></table></figure>
+<h3 id="2-elementCount"><a href="#2-elementCount" class="headerlink" title="2 elementCount"></a>2 elementCount</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Stack的实际元素个数(等同于其他集合的size)</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">int</span> elementCount;</span><br></pre></td></tr></table></figure>
+<h3 id="3-capacityIncrement"><a href="#3-capacityIncrement" class="headerlink" title="3 capacityIncrement"></a>3 capacityIncrement</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//capacityIncrement为Stack每次自动增长的大小，</span></span><br><span class="line"><span class="comment">//若capacityIncrement小于等于0，则按默认自动扩充为原来的1倍</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">int</span> capacityIncrement;</span><br></pre></td></tr></table></figure>
+<h3 id="4-modCount"><a href="#4-modCount" class="headerlink" title="4 modCount"></a>4 modCount</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//modCount属性为list被结构性修改(structurally modified)的总次数，</span></span><br><span class="line"><span class="comment">//结构性修改为任意对size进行修改的操作，如add()、remove()等。</span></span><br><span class="line"><span class="comment">//modCount属性继承于父抽象类AbstractList。</span></span><br><span class="line"><span class="comment">//modCount属性的主要用于确保iterator遍历的准确性，防止多个线程对该list进行操作，</span></span><br><span class="line"><span class="comment">//如果在iterator遍历过程中，另一个线程对该list进行了结构性修改(即modcount改变)，</span></span><br><span class="line"><span class="comment">//java将会抛出ConcurrentModificationException异常，也就是fail-fast机制.</span></span><br><span class="line"><span class="keyword">protected</span> <span class="keyword">transient</span> <span class="keyword">int</span> modCount = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="三-Stack构造函数"><a href="#三-Stack构造函数" class="headerlink" title="三 Stack构造函数"></a>三 Stack构造函数</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Stack就只有一个默认构造函数，Stack不支持Vector的各种制定参数的构造方法。</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Stack</span><span class="params">()</span> </span>&#123;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="四-Stack方法之-增"><a href="#四-Stack方法之-增" class="headerlink" title="四 Stack方法之 增"></a>四 Stack方法之 增</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//入栈方法,把元素添加到Stack最后一个位置</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> E <span class="title">push</span><span class="params">(E item)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//实际上调用了父类Vector的addElement方法,</span></span><br><span class="line">    <span class="comment">//addElement()和push()方法本质上没有任何差别。</span></span><br><span class="line">    addElement(item);</span><br><span class="line">    <span class="keyword">return</span> item;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//父类的addElement方法如下</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">addElement</span><span class="params">(E obj)</span> </span>&#123;</span><br><span class="line"> 	modCount++;</span><br><span class="line">   	<span class="comment">//判断是否需要自动扩充数组</span></span><br><span class="line">	ensureCapacityHelper(elementCount + <span class="number">1</span>);</span><br><span class="line">	elementData[elementCount++] = obj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="五-Stack方法之-查"><a href="#五-Stack方法之-查" class="headerlink" title="五 Stack方法之 查"></a>五 Stack方法之 查</h2><h3 id="1-peek-方法"><a href="#1-peek-方法" class="headerlink" title="1 peek()方法"></a>1 peek()方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">//该方法查询出Stack的最后一个元素,但是不删除该元素</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> E <span class="title">peek</span><span class="params">()</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span>     len = size();</span><br><span class="line">   <span class="keyword">if</span> (len == <span class="number">0</span>)</span><br><span class="line">   <span class="comment">//如果Stack为空则抛出EmptyStackException异常</span></span><br><span class="line">       <span class="keyword">throw</span> <span class="keyword">new</span> EmptyStackException();</span><br><span class="line">   <span class="keyword">return</span> elementAt(len - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="2-search-Object-o-方法"><a href="#2-search-Object-o-方法" class="headerlink" title="2 search(Object o)方法"></a>2 search(Object o)方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">int</span> <span class="title">search</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//lastIndexOf()方法下面会说.</span></span><br><span class="line">        <span class="keyword">int</span> i = lastIndexOf(o);</span><br><span class="line">    <span class="keyword">if</span> (i &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> size() - i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​    父类的lastIndexOf()方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//该方法返回Object o 在Stack中最后一个出现的位置</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">int</span> <span class="title">lastIndexOf</span><span class="params">(Object o, <span class="keyword">int</span> index)</span> </span>&#123;</span><br><span class="line"><span class="comment">//判断是否越界</span></span><br><span class="line">    <span class="keyword">if</span> (index &gt;= elementCount)</span><br><span class="line">	<span class="keyword">throw</span> <span class="keyword">new</span> IndexOutOfBoundsException(index + <span class="string">" &gt;= "</span>+ elementCount);</span><br><span class="line">    <span class="comment">//分为不为空两种情况</span></span><br><span class="line">    <span class="keyword">if</span> (o == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = index; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">            <span class="keyword">if</span> (elementData[i]==<span class="keyword">null</span>)</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = index; i &gt;= <span class="number">0</span>; i--)</span><br><span class="line">            <span class="keyword">if</span> (o.equals(elementData[i]))</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="六-Stack方法之-改"><a href="#六-Stack方法之-改" class="headerlink" title="六 Stack方法之 改"></a>六 Stack方法之 改</h2><p>​    Stack没有提供专属的修改方法，修改方法继承父类Vector。</p>
+<h2 id="七-Stack方法之-删"><a href="#七-Stack方法之-删" class="headerlink" title="七 Stack方法之 删"></a>七 Stack方法之 删</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> E <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    E obj;</span><br><span class="line">    <span class="keyword">int</span> len = size();</span><br><span class="line">    <span class="comment">//通过peek()方法返回Stack最后一个元素</span></span><br><span class="line">    obj = peek();</span><br><span class="line">    <span class="comment">//移除Stack数组的最后一个元素</span></span><br><span class="line">    removeElementAt(len - <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="八-优点"><a href="#八-优点" class="headerlink" title="八 优点"></a>八 优点</h2><p>​    Stack提供了出栈（pop）、入栈（push）等方法来实现栈数据结构，并且Stack是全线程安全的，所有方法都上了同步锁。</p>
+<h2 id="九-缺点"><a href="#九-缺点" class="headerlink" title="九 缺点"></a>九 缺点</h2><p>​    1、Stack由于继承了Vector类，导致其所有方法都加了同步锁，使得运行效率低下。</p>
+<p>​    2、Stack和Vector一样作为远古时期的JDK类，属于即将被时代所淘汰的产物，官方并不建议使用这两个类。</p>
+<p>​    若果你需要在多线程下使用<strong>Vector</strong>类，请使用以下替代品：</p>
+<p>​    a、<strong>java.util.concurrent.CopyOnWriteArrayList</strong></p>
+<p>​    b、<strong>Collections.synchronizedList</strong> </p>
+<p>​    若果你要使用<strong>Stack</strong>类，请使用以下替代品：</p>
+<p>​    非多线程：</p>
+<p>​    a、<strong>linkedList</strong></p>
+<p>​    多线程：</p>
+<p>​    b、<strong>java.util.concurrent.ConcurrentLinkedDeque</strong></p>
+<p>​    c、<strong>java.util.concurrent.ConcurrentLinkedQueue</strong></p>
+<p>​    d、<strong>ArrayDeque</strong></p>
+<h2 id="十-总结"><a href="#十-总结" class="headerlink" title="十 总结"></a>十 总结</h2><p>​    Stack是基于数组实现的线程安全的栈结构，但是由于时代的演化，不建议大家使用该类进行业务开发，抛弃它吧！</p>
+<p>​<br>​<br>​    </p>
+
       
     </div>
     
@@ -606,358 +467,75 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>捐钱是不可能捐钱的了，这辈子都不可能捐钱的了</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="Alex Lin 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="www.alexlin.club/blog/2018/11/03/【干了这杯源码】集合框架-List之LinkedLIst（三）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Alex Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/luxun.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AlexBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/03/【干了这杯源码】集合框架-List之LinkedLIst（三）/" itemprop="url">【干了这杯源码】集合框架 List之LinkedList（三）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-03T14:47:37+08:00">
-                2018-11-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/Java/干了这杯源码/" itemprop="url" rel="index">
-                    <span itemprop="name">干了这杯源码</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/java/" rel="tag"># java</a>
           
-
+            <a href="/tags/集合框架/" rel="tag"># 集合框架</a>
           
-            
+            <a href="/tags/源码/" rel="tag"># 源码</a>
           
-
+            <a href="/tags/List/" rel="tag"># List</a>
           
+            <a href="/tags/Stack/" rel="tag"># Stack</a>
           
-
+            <a href="/tags/栈/" rel="tag"># 栈</a>
           
-          
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h1 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><img src="/2018/11/03/【干了这杯源码】集合框架-List之LinkedLIst（三）/LinkedList.png">
-<p>LinkedList 继承List接口，继承了List所有的方法。</p>
-<p>LinkedList 允许存入任意类型的元素（包括null）。<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/03/【干了这杯源码】集合框架-List之LinkedLIst（三）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/19/【干了这杯源码】集合框架-List之Vector（四）/" rel="next" title="【干了这杯源码】集合框架 List之Vector（四）">
+                <i class="fa fa-chevron-left"></i> 【干了这杯源码】集合框架 List之Vector（四）
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="www.alexlin.club/blog/2018/11/02/【干了这杯源码】集合框架-List之ArrayList（二）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Alex Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/luxun.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AlexBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/02/【干了这杯源码】集合框架-List之ArrayList（二）/" itemprop="url">【干了这杯源码】集合框架 List之ArrayList（二）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+          <div class="post-nav-prev post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-02T22:47:37+08:00">
-                2018-11-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/Java/干了这杯源码/" itemprop="url" rel="index">
-                    <span itemprop="name">干了这杯源码</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-          
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h1 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><img src="/2018/11/02/【干了这杯源码】集合框架-List之ArrayList（二）/ArrayList.png">
-<p>​    ArrayList的底层数据结构为数组，实现了List接口，允许传入所有类型的元素(包括null)。<br>​    ArrayList内部提供了方法，对数组的大小进行自动扩充。<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/11/02/【干了这杯源码】集合框架-List之ArrayList（二）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -967,348 +545,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="www.alexlin.club/blog/2018/10/08/【干了这杯源码】集合框架-Collection接口介绍（一）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Alex Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/luxun.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AlexBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/08/【干了这杯源码】集合框架-Collection接口介绍（一）/" itemprop="url">【干了这杯源码】集合框架 Collection接口介绍（一）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T22:47:37+08:00">
-                2018-10-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/Java/干了这杯源码/" itemprop="url" rel="index">
-                    <span itemprop="name">干了这杯源码</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-          
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Collection接口"><a href="#Collection接口" class="headerlink" title="Collection接口"></a>Collection接口</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>​    Collection是集合框架的根接口(root interface)，一个Collection代表了一组元素的集合，一部分Collection允许元素重复、有序排列，一部分则相反，在JDK中没有提供任何直接实现Collection的实现类，但是提供了很多特异性的子接口，例如Set、List和Queue，这些子接口将会极大程度地覆盖日常开发使用的情景。</p>
-<p>所有实现Collection接口的实现类都包含了两个构造器:<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/08/【干了这杯源码】集合框架-Collection接口介绍（一）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="www.alexlin.club/blog/2018/10/08/【干源码】集合框架  数据结构（零）/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Alex Lin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/luxun.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AlexBlog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/08/【干源码】集合框架  数据结构（零）/" itemprop="url">【干了这杯源码】集合框架  数据结构（零）</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-08T22:47:37+08:00">
-                2018-10-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/" itemprop="url" rel="index">
-                    <span itemprop="name">计算机</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/Java/" itemprop="url" rel="index">
-                    <span itemprop="name">Java</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/计算机/Java/干了这杯源码/" itemprop="url" rel="index">
-                    <span itemprop="name">干了这杯源码</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-          
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>​    本专题将会给大家来带Java最实用的东西—集合框架，并将会直接从源码入手，直接干源码！由于集合框架的底层离不开数据结构，想搞清楚List、Set、Map等的底层实现，必须先从数据结构开始讲起。所以开山第一篇，将会给大家介绍计算机的数据结构。</p>
-<p>​    数据结构可以说是计算机入门必修课程，同时也是特别烧脑的纯理论知识。所以本篇将会尽量避开让人看不懂的奇奇怪怪的东西，以生动形象的图文并茂带你窥探神秘的数据结构。<br></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/08/【干源码】集合框架  数据结构（零）/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -1316,6 +557,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -1336,8 +581,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1408,6 +662,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Stack"><span class="nav-text">Stack</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-概述"><span class="nav-text">一 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Stack继承图"><span class="nav-text">Stack继承图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-Stack的属性"><span class="nav-text">二 Stack的属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-elementData"><span class="nav-text">1 elementData</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-elementCount"><span class="nav-text">2 elementCount</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-capacityIncrement"><span class="nav-text">3 capacityIncrement</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-modCount"><span class="nav-text">4 modCount</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-Stack构造函数"><span class="nav-text">三 Stack构造函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-Stack方法之-增"><span class="nav-text">四 Stack方法之 增</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五-Stack方法之-查"><span class="nav-text">五 Stack方法之 查</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-peek-方法"><span class="nav-text">1 peek()方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-search-Object-o-方法"><span class="nav-text">2 search(Object o)方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六-Stack方法之-改"><span class="nav-text">六 Stack方法之 改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七-Stack方法之-删"><span class="nav-text">七 Stack方法之 删</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八-优点"><span class="nav-text">八 优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九-缺点"><span class="nav-text">九 缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十-总结"><span class="nav-text">十 总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1554,6 +824,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
