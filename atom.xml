@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.alexlin.club/blog/"/>
-  <updated>2018-11-28T12:48:20.175Z</updated>
+  <updated>2018-12-02T05:01:34.671Z</updated>
   <id>www.alexlin.club/blog/</id>
   
   <author>
@@ -17,11 +17,49 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>探索中间件 - 消息队列之RabbitMQ</title>
+    <link href="www.alexlin.club/blog/2018/12/02/%E6%8E%A2%E7%B4%A2%E4%B8%AD%E9%97%B4%E4%BB%B6%20-%20%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%B9%8BRabbitMQ/"/>
+    <id>www.alexlin.club/blog/2018/12/02/探索中间件 - 消息队列之RabbitMQ/</id>
+    <published>2018-12-02T14:47:37.000Z</published>
+    <updated>2018-12-02T05:01:34.671Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;RabbitMQ&quot;&gt;&lt;a href=&quot;#RabbitMQ&quot; class=&quot;headerlink&quot; title=&quot;RabbitMQ&quot;&gt;&lt;/a&gt;RabbitMQ&lt;/h1&gt;&lt;h2 id=&quot;一-什么是消息队列&quot;&gt;&lt;a href=&quot;#一-什么是消息队列&quot; class=&quot;headerlink&quot; title=&quot;一 什么是消息队列&quot;&gt;&lt;/a&gt;一 什么是消息队列&lt;/h2&gt;&lt;h3 id=&quot;1-定义&quot;&gt;&lt;a href=&quot;#1-定义&quot; class=&quot;headerlink&quot; title=&quot;1 定义&quot;&gt;&lt;/a&gt;1 定义&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;​    消息队列（Message queue）是一种进程间通信或同一进程的不同线程间的通信方式，软件的贮列用来处理一系列的输入，通常是来自用户。消息队列提供了异步的通信协议，每一个贮列中的纪录包含详细说明的数据，包含发生的时间，输入设备的种类，以及特定的输入参数，也就是说：消息的发送者和接收者不需要同时与消息队列互交。消息会保存在队列中，直到接收者取回它。 ——维基百科&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;消息队列是消费-生产者模型的典型实现，如下图所示：&lt;/p&gt;
+&lt;img src=&quot;/2018/12/02/探索中间件%20-%20消息队列之RabbitMQ/xxdl.png&quot;&gt;
+    
+    </summary>
+    
+      <category term="计算机" scheme="www.alexlin.club/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+      <category term="中间件" scheme="www.alexlin.club/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+      <category term="消息队列" scheme="www.alexlin.club/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/"/>
+    
+      <category term="RabbitMQ" scheme="www.alexlin.club/blog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E4%B8%AD%E9%97%B4%E4%BB%B6/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/RabbitMQ/"/>
+    
+    
+      <category term="中间件" scheme="www.alexlin.club/blog/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+      <category term="消息队列" scheme="www.alexlin.club/blog/tags/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/"/>
+    
+      <category term="Queue" scheme="www.alexlin.club/blog/tags/Queue/"/>
+    
+      <category term="生产-消费者模型" scheme="www.alexlin.club/blog/tags/%E7%94%9F%E4%BA%A7-%E6%B6%88%E8%B4%B9%E8%80%85%E6%A8%A1%E5%9E%8B/"/>
+    
+      <category term="RabbitMQ" scheme="www.alexlin.club/blog/tags/RabbitMQ/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【干了这杯源码】集合框架 List之Stack（五）</title>
     <link href="www.alexlin.club/blog/2018/11/24/%E3%80%90%E5%B9%B2%E4%BA%86%E8%BF%99%E6%9D%AF%E6%BA%90%E7%A0%81%E3%80%91%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-List%E4%B9%8BStack%EF%BC%88%E4%BA%94%EF%BC%89/"/>
     <id>www.alexlin.club/blog/2018/11/24/【干了这杯源码】集合框架-List之Stack（五）/</id>
     <published>2018-11-24T15:20:37.000Z</published>
-    <updated>2018-11-28T12:48:20.175Z</updated>
+    <updated>2018-11-28T13:00:38.286Z</updated>
     
     <summary type="html">
     
@@ -55,11 +93,11 @@
     <link href="www.alexlin.club/blog/2018/11/19/%E3%80%90%E5%B9%B2%E4%BA%86%E8%BF%99%E6%9D%AF%E6%BA%90%E7%A0%81%E3%80%91%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6-List%E4%B9%8BVector%EF%BC%88%E5%9B%9B%EF%BC%89/"/>
     <id>www.alexlin.club/blog/2018/11/19/【干了这杯源码】集合框架-List之Vector（四）/</id>
     <published>2018-11-19T10:47:37.000Z</published>
-    <updated>2018-11-28T12:54:48.974Z</updated>
+    <updated>2018-11-28T13:05:21.964Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Vector&quot;&gt;&lt;a href=&quot;#Vector&quot; class=&quot;headerlink&quot; title=&quot;Vector&quot;&gt;&lt;/a&gt;Vector&lt;/h1&gt;&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;img src=&quot;/2018/11/19/【干了这杯源码】集合框架-List之Vector（四）/Vector.png&quot;&gt;
+      &lt;h1 id=&quot;Vector&quot;&gt;&lt;a href=&quot;#Vector&quot; class=&quot;headerlink&quot; title=&quot;Vector&quot;&gt;&lt;/a&gt;Vector&lt;/h1&gt;&lt;h2 id=&quot;一-概述&quot;&gt;&lt;a href=&quot;#一-概述&quot; class=&quot;headerlink&quot; title=&quot;一 概述&quot;&gt;&lt;/a&gt;一 概述&lt;/h2&gt;&lt;img src=&quot;/2018/11/19/【干了这杯源码】集合框架-List之Vector（四）/Vector.png&quot;&gt;
 &lt;p&gt;​    Vector来自于远古的JDK1.0，属于上古时期的类，因为其所有方法都上了同步锁，所以性能会比ArrayList低很多。&lt;br&gt;​    Vector和ArrayList一样实现了可自动扩充的数组，都可根据下标直接访问元素，另外Vector可以根据需求改变自动增长的策略，默认每次增为原来的一倍。&lt;br&gt;​    Vector是线程安全的，扫一眼源码你会发现，Vector很多方法都加了synchronized关键字，确保了线程的安全性。&lt;br&gt;&lt;/p&gt;
     
     </summary>

@@ -90,7 +90,7 @@
 <meta property="og:description" content="Stack一 概述​    Stack英文意思为一大堆，Java JDK中的Stack类用于模拟数据结构中的栈。​    什么是栈结构，用最简单的比喻，栈结构就如同桌子上整齐堆叠的一些书本，当你存放的时候，必须一本一本的往上放(入栈)，当你取书的时候必须从最上面一本一本的往下拿(出栈)。​    所以，栈结构的特点是先进者后出，后进者先出，就是所谓的FILO( First In Last Out)">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="/2018/11/24/【干了这杯源码】集合框架-List之Stack（五）/Stack.png">
-<meta property="og:updated_time" content="2018-11-28T12:48:20.175Z">
+<meta property="og:updated_time" content="2018-11-28T13:00:38.286Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【干了这杯源码】集合框架 List之Stack（五）">
 <meta name="twitter:description" content="Stack一 概述​    Stack英文意思为一大堆，Java JDK中的Stack类用于模拟数据结构中的栈。​    什么是栈结构，用最简单的比喻，栈结构就如同桌子上整齐堆叠的一些书本，当你存放的时候，必须一本一本的往上放(入栈)，当你取书的时候必须从最上面一本一本的往下拿(出栈)。​    所以，栈结构的特点是先进者后出，后进者先出，就是所谓的FILO( First In Last Out)">
@@ -426,7 +426,7 @@
 
       
         <h1 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h1><h2 id="一-概述"><a href="#一-概述" class="headerlink" title="一 概述"></a>一 概述</h2><p>​    <strong>Stack</strong>英文意思为一大堆，Java JDK中的<strong>Stack</strong>类用于模拟数据结构中的栈。<br>​    什么是栈结构，用最简单的比喻，栈结构就如同桌子上整齐堆叠的一些书本，当你存放的时候，必须一本一本的往上放(入栈)，当你取书的时候必须从最上面一本一本的往下拿(出栈)。<br>​    所以，栈结构的特点是先进者后出，后进者先出，就是所谓的<strong>FILO</strong>( First In Last Out)。<br>​    <strong>Stack</strong> 继承于Vector类，所以<strong>Stack</strong>是一个线程安全的基于数组实现的栈结构。<br><a id="more"></a><br>​    提示：JDK中的<strong>Deque</strong>接口提供了一个更加优秀和实用的LIFO栈结构，用来替代Stack类:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`Deque stack = <span class="keyword">new</span> ArrayDeque();`</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Deque stack = <span class="keyword">new</span> ArrayDeque();</span><br></pre></td></tr></table></figure>
 <h3 id="Stack继承图"><a href="#Stack继承图" class="headerlink" title="Stack继承图"></a>Stack继承图</h3>   <img src="/2018/11/24/【干了这杯源码】集合框架-List之Stack（五）/Stack.png">
 <h2 id="二-Stack的属性"><a href="#二-Stack的属性" class="headerlink" title="二 Stack的属性"></a>二 Stack的属性</h2><p>​    由于Stack继承Vector类，所以Stack的属性就是Vector的属性，无额外属性。</p>
 <h3 id="1-elementData"><a href="#1-elementData" class="headerlink" title="1 elementData"></a>1 elementData</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//该属性为Object类型的空数组,是Stack的底层存储数组</span></span><br><span class="line"><span class="keyword">protected</span> Object[] elementData;</span><br></pre></td></tr></table></figure>
@@ -531,6 +531,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/12/02/探索中间件 - 消息队列之RabbitMQ/" rel="prev" title="探索中间件 - 消息队列之RabbitMQ">
+                探索中间件 - 消息队列之RabbitMQ <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -610,7 +614,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -621,7 +625,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -632,7 +636,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
